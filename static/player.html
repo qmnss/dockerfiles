@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>stream-test.rylee.me</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+    </style>
+    <script src="http://jwpsrv.com/library/0qNV5BKwEeWHDxJtO5t17w.js"></script>
+  </head>
+  <body style="padding: 0; margin: 0;">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <div id='playersVTGbLzLGWYe' style="max-height: 100%;"></div>
+    <script type="text/javascript" charset="utf-8">
+      var w_height = $(window).innerHeight();
+      var w_width = $(window).innerWidth();
+      jwplayer('playersVTGbLzLGWYe').setup({
+        file: 'rtmp://stream-test.rylee.me/stream/stream',
+        image: '/static/jade-and-i-3.jpg',
+        title: 'Stream',
+        width: w_width,
+        height: w_height,
+        autostart: 'true',
+      });
+      $(window).resize(function(e) {
+        var new_w_height = $(window).height();
+        var new_w_width = $(window).width();
+        jwplayer("video").resize(new_w_width, new_w_height);
+      });
+    </script>
+  </body>
+</html>
