@@ -1,0 +1,7 @@
+#!/bin/bash
+
+TERRARIA_WORLD_SIZE=3
+TERRARIA_WORLD_NAME=terraria.wld
+
+cd /opt/terraria/
+sudo -u terraria mono --server --gc=sgen -O=all TerrariaServer.exe -port 7777 -autocreate "$TERRARIA_WORLD_SIZE" -world "/opt/terraria/worlds/$TERRARIA_WORLD_NAME" -configpath /opt/terraria/config/ -logpath /opt/terraria/logs
