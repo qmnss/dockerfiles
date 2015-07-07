@@ -6,9 +6,8 @@ RUN apt-get update -y
 RUN apt-get install -yq mono-complete unzip
 
 RUN mkdir -p /opt/terraria/
-ADD https://github.com/NyxStudios/TShock/releases/download/4.3.0GM1/tshock_4.3.0_gm1.zip /tmp/tshock.zip
+ADD https://github.com/NyxStudios/TShock/releases/download/v4.3.1/tshock_4.3.1_pre1.zip /tmp/tshock.zip
 RUN unzip -d /opt/terraria /tmp/tshock.zip
-RUN rm /opt/terraria/ServerPlugins/MySql.Web.dll
 
 ADD start-service /etc/service/terraria/run
 
