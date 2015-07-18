@@ -6,7 +6,7 @@ RUN apt-get update -y
 RUN apt-get install -yq mono-complete unzip
 
 RUN mkdir -p /opt/terraria/
-ADD https://github.com/NyxStudios/TShock/releases/download/v4.3.1/tshock_4.3.1_pre1.zip /tmp/tshock.zip
+ADD https://github.com/NyxStudios/TShock/releases/download/v4.3.5/tshock_4.3.5-release.zip /tmp/tshock.zip
 RUN unzip -d /opt/terraria /tmp/tshock.zip
 
 ADD start-service /etc/service/terraria/run
